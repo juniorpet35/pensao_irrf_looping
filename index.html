@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensão x IRRF - IRRF x Pensão</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <h1>Pensão x IRRF - IRRF x Pensão</h1>
+
+    <p>Base para INSS: <input type="number" id="inBaseInss" min="0"></p>
+    <div id="mensagemErro"></div>
+    <p>Base da Pensão: <input type="number" id="inBasePensao" min="0"></p>
+    <p>Porcentagem: <input type="number" id="inPorcPensao" placeholder="25%" min="1"></p>
+    <p>Dependente(s): <input type="number" id="inQtDep" min="1"></p>
+
+    <p><input type="button" value="Calcular" id="btnCalcular"></p>
+
+    <h3 id="outPensao"></h3>
+    <h3 id="outPensao2"></h3>
+    <h3 id="outPensao3"></h3>
+    <h3 id="outPensao4"></h3>
+    <h3 id="outPensao5"></h3>
+    <h3 id="outIrrf"></h3>
+    <h3 id="outPensaoIrrf"></h3>
+
+    <script src="js/calculoPensao.js"></script>
+</body>
+</html>
