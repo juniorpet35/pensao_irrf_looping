@@ -401,8 +401,10 @@ function calculoIrrf(){
     let outPensao3 = document.getElementById("outPensao3");
     let outPensao4 = document.getElementById("outPensao4");
     let outPensao5 = document.getElementById("outPensao5");
-    if (qtDep < 1){
-        alert("A quantidade de dependentes não pode ser menor que 1!");
+    let mensagem = document.getElementById("mensagemErro");
+    if (inQtDep.value < 1){
+        mensagem.textContent = "A quantidade de dependentes não pode ser menor que 1!";
+        inQtDep.focus();
         qtDep = 1;
         outPensao.textContent = "";
         outPensao2.textContent = "";
@@ -411,6 +413,8 @@ function calculoIrrf(){
         outPensao5.textContent = "";
         outIrrf.textContent = "";
         return;
+    } else {
+        mensagem.textContent = ""; // Limpa mensagem de erro se a entrada for válida
     }
 
     let novoValor = (inBaseInss.value - deducao);
@@ -454,9 +458,53 @@ function pensaoFinal(){
     let outPensaoFinal = document.getElementById("outPensaoFinal");
     let inPorcPensao = document.getElementById("inPorcPensao");
     let porcentagem = Number(inPorcPensao.value) / 100;
+    let inBaseInss = document.getElementById("inBaseInss");
+    let outPensao = document.getElementById("outPensao");
+    let outPensao2 = document.getElementById("outPensao2");
+    let outPensao3 = document.getElementById("outPensao3");
+    let outPensao4 = document.getElementById("outPensao4");
+    let outPensao5 = document.getElementById("outPensao5");
+    let inQtDep = document.getElementById("inQtDep");
+
 
     let pensaoFinal = (basePensao - inss - irrf) * porcentagem;
     outPensaoFinal.textContent = `Valor da Pensão: ${pensaoFinal.toFixed(2)}`;
+
+    let mensagem = document.getElementById("mensagemErro");
+    if (isNaN(inBaseInss.value) || inBaseInss.value == "" || inBaseInss.value <=0){
+        mensagem.textContent = "Digite um valor válido para calcular a pensão.";
+        inBaseInss.focus();
+        inBaseInss.value = "";
+        outPensaoFinal.textContent = "";
+        return;
+    } else if(isNaN(basePensao) || basePensao == "" || basePensao <=0){
+        mensagem.textContent = "Digite um valor válido para calcular a pensão.";
+        inBasePensao.focus();
+        inBasePensao.value = "";
+        outPensaoFinal.textContent = "";
+        outIrrf.textContent = "";
+        return;
+    }else if (isNaN(porcentagem) || porcentagem == "" || porcentagem <=0){
+        mensagem.textContent = "Digite uma porcentagem válida para calcular a pensão."
+        inPorcPensao.focus();
+        outPensao.textContent = "";
+        outPensao2.textContent = "";
+        outPensao3.textContent = "";
+        outPensao4.textContent = "";
+        outPensao5.textContent = "";
+        let outIrrf = document.getElementById("outIrrf");
+        outIrrf.textContent = "";
+        outPensaoFinal.textContent = "";
+        return;
+    }else if (inQtDep.value <= 0){
+        mensagem.textContent = "A quantidade de dependentes não pode ser menor que 1!"
+        inQtDep.focus();
+        outPensaoFinal.textContent = "";
+
+    }else {
+        mensagem.textContent = ""; // Limpa mensagem de erro se a entrada for válida
+    }
+
     return pensaoFinal;
 }
 
