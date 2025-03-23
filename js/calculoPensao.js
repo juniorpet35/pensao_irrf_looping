@@ -133,7 +133,11 @@ function calculoPensao(){
     }
 
     pensao1 = (basePensao - inss - pensao0) * porcentagem;
-    outPensao.textContent = `Valor da pensao1: ${pensao1.toFixed(2)}`;
+    if (pensao1 <= 0){
+        outPensao.textContent = `0.00`;
+    } else {
+        outPensao.textContent = `Valor da Pensão 1: ${pensao1.toFixed(2)}`;
+    }
 
     function _irrfPensao1(){
         let inBaseInss = document.getElementById("inBaseInss");
@@ -187,7 +191,11 @@ function calculoPensao(){
     let irrfPensao1 = _irrfPensao1();
     pensao2 = (basePensao - inss - irrfPensao1) * porcentagem;
     let outPensao2 = document.getElementById("outPensao2");
-    outPensao2.textContent = `Valor da pensao2: ${pensao2.toFixed(2)}`;
+    if (pensao2 <= 0){
+        outPensao2.textContent = `0.00`;
+    } else {
+        outPensao2.textContent = `Valor da Pensão 2: ${pensao2.toFixed(2)}`;
+    }
 
     function _irrfPensao2(){
         let inBaseInss = document.getElementById("inBaseInss");
@@ -240,7 +248,11 @@ function calculoPensao(){
     let irrfPensao2 = _irrfPensao2();
     pensao3 = (basePensao - inss - irrfPensao2) * porcentagem;
     let outPensao3 = document.getElementById("outPensao3");
-    outPensao3.textContent = `Valor da pensao3: ${pensao3.toFixed(2)}`;
+    if (pensao3 <= 0){
+        outPensao3.textContent = `0.00`;
+    } else {
+        outPensao3.textContent = `Valor da Pensão 3: ${pensao3.toFixed(2)}`;
+    }
 
     function _irrfPensao3(){
         let inBaseInss = document.getElementById("inBaseInss");
@@ -293,7 +305,11 @@ function calculoPensao(){
     let irrfPensao3 = _irrfPensao3();
     pensao4 = (basePensao - inss - irrfPensao3) * porcentagem;
     let outPensao4 = document.getElementById("outPensao4");
-    outPensao4.textContent = `Valor da pensao4: ${pensao4.toFixed(2)}`;
+    if (pensao4 <= 0){
+        outPensao4.textContent = `0.00`;
+    } else {
+        outPensao4.textContent = `Valor da Pensão 4: ${pensao4.toFixed(2)}`;
+    }
 
     function _irrfPensao4(){
         let inBaseInss = document.getElementById("inBaseInss");
@@ -346,7 +362,11 @@ function calculoPensao(){
     let irrfPensao4 = _irrfPensao4();
     pensao5 = (basePensao - inss - irrfPensao4) * porcentagem;
     let outPensao5 = document.getElementById("outPensao5");
-    outPensao5.textContent = `Valor da Pensão 5: ${pensao5.toFixed(2)}`;
+    if (pensao5 <= 0){
+        outPensao5.textContent = `0.00`;
+    } else {
+        outPensao5.textContent = `Valor da Pensão 5: ${pensao5.toFixed(2)}`;
+    }
 
     if(baseInss <= 0 || basePensao <= 0 || isNaN(basePensao) || isNaN(baseInss) || baseInss == "" || basePensao == ""){
         outPensao.textContent = "";
@@ -468,8 +488,12 @@ function pensaoFinal(){
 
 
     let pensaoFinal = (basePensao - inss - irrf) * porcentagem;
-    outPensaoFinal.textContent = `Valor da Pensão: ${pensaoFinal.toFixed(2)}`;
-
+    if (pensaoFinal <= 0){
+    
+        outPensaoFinal.textContent = `0.00`;
+    } else{
+        outPensaoFinal.textContent = `Valor da Pensão de ${inPorcPensao.value}%: ${pensaoFinal.toFixed(2)}`;
+    }
     let mensagem = document.getElementById("mensagemErro");
     if (isNaN(inBaseInss.value) || inBaseInss.value == "" || inBaseInss.value <=0){
         mensagem.textContent = "Digite um valor válido para calcular a pensão.";
