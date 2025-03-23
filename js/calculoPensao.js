@@ -446,10 +446,25 @@ function calculoIrrf(){
     return irrf;
 }
 
+function pensaoFinal(){
+    let irrf = calculoIrrf();
+    let inss = calculoInss();
+    let inBasePensao = document.getElementById("inBasePensao");
+    let basePensao = Number(inBasePensao.value);
+    let outPensaoFinal = document.getElementById("outPensaoFinal");
+    let inPorcPensao = document.getElementById("inPorcPensao");
+    let porcentagem = Number(inPorcPensao.value) / 100;
+
+    let pensaoFinal = (basePensao - inss - irrf) * porcentagem;
+    outPensaoFinal.textContent = `Valor da Pensão: ${pensaoFinal.toFixed(2)}`;
+    return pensaoFinal;
+}
+
 function calcular(){
     calculoInss();
     calculoPensao();
     calculoIrrf();
+    pensaoFinal();
     inBaseInss.focus();
 }
 
