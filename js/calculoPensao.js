@@ -136,7 +136,7 @@ function calculoPensao(){
     if (pensao1 <= 0){
         outPensao.textContent = `0.00`;
     } else {
-        outPensao.textContent = `Valor da Pensão 1: ${pensao1.toFixed(2) - INSS ${inss}} - IRRFPensaoAnterior ${_irrfPensao0}}}`;
+        outPensao.textContent = `Valor da Pensão 1: ${pensao1.toFixed(2)} - INSS ${inss} - IRRFPensaoAnterior ${_irrfPensao0}`;
     }
 
     function _irrfPensao1(){
