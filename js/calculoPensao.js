@@ -136,7 +136,7 @@ function calculoPensao(){
     if (pensao1 <= 0){
         outPensao.textContent = `0.00`;
     } else {
-        outPensao.textContent = `Valor da Pensão 1: ${pensao1.toFixed(2)}`;
+        outPensao.textContent = `Valor da Pensão 1: ${pensao1.toFixed(2) - INSS ${inss}} - IRRFPensaoAnterior ${_irrfPensao0}}}`;
     }
 
     function _irrfPensao1(){
@@ -194,7 +194,7 @@ function calculoPensao(){
     if (pensao2 <= 0){
         outPensao2.textContent = `0.00`;
     } else {
-        outPensao2.textContent = `Valor da Pensão 2: ${pensao2.toFixed(2)}`;
+        outPensao2.textContent = `Valor da Pensão 2: ${pensao2.toFixed(2) - INSS ${inss}} - IRRFPensaoAnterior ${_irrfPensao1}}}`;
     }
 
     function _irrfPensao2(){
@@ -251,7 +251,7 @@ function calculoPensao(){
     if (pensao3 <= 0){
         outPensao3.textContent = `0.00`;
     } else {
-        outPensao3.textContent = `Valor da Pensão 3: ${pensao3.toFixed(2)}`;
+        outPensao3.textContent = `Valor da Pensão 3: ${pensao3.toFixed(2) - INSS ${inss}} - IRRFPensaoAnterior ${_irrfPensao2}}}`;
     }
 
     function _irrfPensao3(){
@@ -308,7 +308,7 @@ function calculoPensao(){
     if (pensao4 <= 0){
         outPensao4.textContent = `0.00`;
     } else {
-        outPensao4.textContent = `Valor da Pensão 4: ${pensao4.toFixed(2)}`;
+        outPensao4.textContent = `Valor da Pensão 4: ${pensao4.toFixed(2) - INSS ${inss}} - IRRFPensaoAnterior ${_irrfPensao3}}}`;
     }
 
     function _irrfPensao4(){
@@ -365,7 +365,7 @@ function calculoPensao(){
     if (pensao5 <= 0){
         outPensao5.textContent = `0.00`;
     } else {
-        outPensao5.textContent = `Valor da Pensão 5: ${pensao5.toFixed(2)}`;
+        outPensao5.textContent = `Valor da Pensão 5: ${pensao5.toFixed(2) - INSS ${inss}} - IRRFPensaoAnterior ${_irrfPensao4}}`;
     }
 
     if(baseInss <= 0 || basePensao <= 0 || isNaN(basePensao) || isNaN(baseInss) || baseInss == "" || basePensao == ""){
