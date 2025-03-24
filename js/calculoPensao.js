@@ -13,7 +13,7 @@ function calculoInss() {
     let aliqFaixa3 = 0.12;
     let aliqFaixa4 = 0.14;
 
-    let inssTeto = 951.63;
+    let inssTeto = 951.62;
 
     //-----------------------//
 
