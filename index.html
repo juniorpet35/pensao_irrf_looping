@@ -9,10 +9,10 @@
 <body>
     <h1>Pensão x IRRF - IRRF x Pensão</h1>
 
-    <p>Base para INSS: <input type="number" id="inBaseInss" min="0"></p>
-    <p>Base da Pensão: <input type="number" id="inBasePensao" min="0"></p>
-    <p>Porcentagem: <input type="number" id="inPorcPensao" placeholder="25%" min="1"></p>
-    <p>Dependente(s): <input type="number" id="inQtDep" min="1"></p>
+    <p>Base para INSS: <input type="number" id="inBaseInss" min="0" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
+<p>Base da Pensão: <input type="number" id="inBasePensao" min="0" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
+<p>Porcentagem: <input type="number" id="inPorcPensao" placeholder="Ex: 25%" min="1" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
+<p>Dependente(s): <input type="number" id="inQtDep" min="1" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
 
     <p><input type="button" value="Calcular" id="btnCalcular"></p>
     <div id="mensagemErro"></div>
@@ -26,7 +26,7 @@
     <h3 id="outPensaoFinal"></h3>
 
     <footer>
-            <p>&copy;Desenvolvido por Carlos Alexandre Junior</p>
+        <p>&copy;Desenvolvido por Carlos Alexandre Junior</p>
     </footer>
 
     <script src="js/calculoPensao.js"></script>
