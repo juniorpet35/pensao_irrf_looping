@@ -12,7 +12,7 @@
     <p>Base para INSS: <input type="number" id="inBaseInss" min="0" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
 <p>Base da Pensão: <input type="number" id="inBasePensao" min="0" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
 <p>Porcentagem: <input type="number" id="inPorcPensao" placeholder="Ex: 25%" min="1" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
-<p>Dependente(s): <input type="number" id="inQtDep" min="1" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
+<p>Dependente(s): <input type="number" id="inQtDep" min="1" step="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></p>
 
     <p><input type="button" value="Calcular" id="btnCalcular"></p>
     <div id="mensagemErro"></div>
