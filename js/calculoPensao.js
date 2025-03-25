@@ -69,7 +69,7 @@ function pensaoIrrf(){
         let faixaTresIr = 662.77;
         let faixaQuatroIr = 896.00;
     
-        let qtDep = Number(inQtDep.value);
+        let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     
         let deducao = 0;
@@ -120,7 +120,7 @@ function calculoPensao(){
     let pensao4 = 0;
     let pensao5 = 0;
 
-    let qtDep = Number(inQtDep.value);
+    let qtDep = Math.floor(Number(inQtDep.value));
     let valorDep = qtDep * 189.59;
     let deducaoLegal;
     let deducaoSimplificada = 564.80;
@@ -155,7 +155,7 @@ function calculoPensao(){
         let faixaTresIr = 662.77;
         let faixaQuatroIr = 896.00;
         //------------------------------//
-        let qtDep = Number(inQtDep.value);
+        let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     	//------------------------------//
         let deducao = 0;
@@ -213,7 +213,7 @@ function calculoPensao(){
         let faixaTresIr = 662.77;
         let faixaQuatroIr = 896.00;
         //------------------------------//
-        let qtDep = Number(inQtDep.value);
+        let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     	//------------------------------//
         let deducao = 0;
@@ -270,7 +270,7 @@ function calculoPensao(){
         let faixaTresIr = 662.77;
         let faixaQuatroIr = 896.00;
         //------------------------------//
-        let qtDep = Number(inQtDep.value);
+        let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     	//------------------------------//
         let deducao = 0;
@@ -327,7 +327,7 @@ function calculoPensao(){
         let faixaTresIr = 662.77;
         let faixaQuatroIr = 896.00;
         //------------------------------//
-        let qtDep = Number(inQtDep.value);
+        let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     	//------------------------------//
         let deducao = 0;
@@ -402,7 +402,7 @@ function calculoIrrf(){
     let faixaTresIr = 662.77;
     let faixaQuatroIr = 896.00;
 
-    let qtDep = inQtDep.value;
+    let qtDep = Math.floor(Number(inQtDep.value));
     let valorDep = qtDep * 189.59;
 
     if (inQtDep.value == 0){
