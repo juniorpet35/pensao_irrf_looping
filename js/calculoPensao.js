@@ -187,7 +187,7 @@ function calculoPensao(){
         return irrfPensao1;
     }
 
-    //--clacular pensao2 deduzindo a pensao1 da base--
+    //--calcular pensao2 deduzindo a pensao1 da base--
     let irrfPensao1 = _irrfPensao1();
     pensao2 = (basePensao - inss - irrfPensao1) * porcentagem;
     let outPensao2 = document.getElementById("outPensao2");
@@ -245,6 +245,7 @@ function calculoPensao(){
         return irrfPensao2;
     }
 
+    //--calcular pensao3 deduzindo a pensao2 da base--
     let irrfPensao2 = _irrfPensao2();
     pensao3 = (basePensao - inss - irrfPensao2) * porcentagem;
     let outPensao3 = document.getElementById("outPensao3");
@@ -301,7 +302,8 @@ function calculoPensao(){
 
         return irrfPensao3;
     }
-    
+
+    //--calcular pensao4 deduzindo a pensao3 da base--
     let irrfPensao3 = _irrfPensao3();
     pensao4 = (basePensao - inss - irrfPensao3) * porcentagem;
     let outPensao4 = document.getElementById("outPensao4");
@@ -359,6 +361,7 @@ function calculoPensao(){
         return irrfPensao4;
     }
 
+    //--calcular pensao5 deduzindo a pensao4 da base--
     let irrfPensao4 = _irrfPensao4();
     pensao5 = (basePensao - inss - irrfPensao4) * porcentagem;
     let outPensao5 = document.getElementById("outPensao5");
@@ -486,7 +489,7 @@ function pensaoFinal(){
     let outPensao5 = document.getElementById("outPensao5");
     let inQtDep = document.getElementById("inQtDep");
 
-
+    //--calcular pensao final deduzindo a pensao5 da base--
     let pensaoFinal = (basePensao - inss - irrf) * porcentagem;
     if (pensaoFinal <= 0){
     
