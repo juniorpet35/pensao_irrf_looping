@@ -11,7 +11,12 @@
     flex-direction: column;
     padding: 30px 15px;
   }
-  
+
+h3.outErro {
+  color: red;
+  font-weight: bold;
+}
+
   main {
     background: #ffffff;
     padding: 30px;
@@ -96,6 +101,13 @@
     font-weight: 500;
     line-height: 1.5;
   }
+
+  .link-direita {
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
   
   footer {
     text-align: center;

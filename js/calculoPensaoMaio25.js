@@ -50,22 +50,22 @@ function pensaoIrrf(){
 
         // Faixas e Alíquotas de IRRF.
 
-        let tabelaIrFaixa0 = 2259.60;
+        let tabelaIrFaixa0 = 2428.80;
         let tabelaIrFaixa1 = 2826.65;
         let tabelaIrFaixa2 = 3751.05; 
         let tabelaIrFaixa3 = 4664.68;
         
-        let faixaUmIr = 169.44;
-        let faixaDoisIr = 381.44;
-        let faixaTresIr = 662.77;
-        let faixaQuatroIr = 896.00;
+        let faixaUmIr = 182.16;
+        let faixaDoisIr = 394.16;
+        let faixaTresIr = 675.49;
+        let faixaQuatroIr = 908.73;
     
         let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     
         let deducao = 0;
-        if ((inss + valorDep) < 564.80){
-            deducao = 564.80;
+        if ((inss + valorDep) < 607.20){
+            deducao = 607.20;
         }else {
             deducao = (inss + valorDep);
         }
@@ -114,7 +114,7 @@ function calculoPensao(){
     let qtDep = Math.floor(Number(inQtDep.value));
     let valorDep = qtDep * 189.59;
     let deducaoLegal;
-    let deducaoSimplificada = 564.80;
+    let deducaoSimplificada = 607.20;
     let deducao;
 
     if (inss + valorDep < deducaoSimplificada){
@@ -136,22 +136,22 @@ function calculoPensao(){
         let inss = calculoInss();
         let irrfPensao1 = 0;
         // Faixas e Alíquotas de IRRF.
-        let tabelaIrFaixa0 = 2259.60;
+        let tabelaIrFaixa0 = 2428.80;
         let tabelaIrFaixa1 = 2826.65;
         let tabelaIrFaixa2 = 3751.05; 
         let tabelaIrFaixa3 = 4664.68;
         //------------------------------//
-        let faixaUmIr = 169.44;
-        let faixaDoisIr = 381.44;
-        let faixaTresIr = 662.77;
-        let faixaQuatroIr = 896.00;
+        let faixaUmIr = 182.16;
+        let faixaDoisIr = 394.16;
+        let faixaTresIr = 675.49;
+        let faixaQuatroIr = 908.73;
         //------------------------------//
         let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     	//------------------------------//
         let deducao = 0;
-        if ((inss + pensao1 + valorDep) < 564.80){
-            deducao = 564.80;
+        if ((inss + pensao1 + valorDep) < 607.20){
+            deducao = 607.20;
         }else {
             deducao = (inss + pensao1 + valorDep);
         }
@@ -194,24 +194,24 @@ function calculoPensao(){
         let inss = calculoInss();
         let irrfPensao2 = 0;
         // Faixas e Alíquotas de IRRF.
-        let tabelaIrFaixa0 = 2259.60;
+        let tabelaIrFaixa0 = 2428.80;
         let tabelaIrFaixa1 = 2826.65;
         let tabelaIrFaixa2 = 3751.05; 
         let tabelaIrFaixa3 = 4664.68;
         //------------------------------//
-        let faixaUmIr = 169.44;
-        let faixaDoisIr = 381.44;
-        let faixaTresIr = 662.77;
-        let faixaQuatroIr = 896.00;
+        let faixaUmIr = 182.16;
+        let faixaDoisIr = 394.16;
+        let faixaTresIr = 675.49;
+        let faixaQuatroIr = 908.73;
         //------------------------------//
         let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     	//------------------------------//
         let deducao = 0;
-        if ((inss + pensao2 + valorDep) < 564.80){
-            deducao = 564.80;
+        if ((inss + pensao1 + valorDep) < 607.20){
+            deducao = 607.20;
         }else {
-            deducao = (inss + pensao2 + valorDep);
+            deducao = (inss + pensao1 + valorDep);
         }
     
         let novoValor = (inBaseInss.value - deducao);
@@ -251,26 +251,26 @@ function calculoPensao(){
         let inss = calculoInss();
         let irrfPensao3 = 0;
         // Faixas e Alíquotas de IRRF.
-        let tabelaIrFaixa0 = 2259.60;
+        let tabelaIrFaixa0 = 2428.80;
         let tabelaIrFaixa1 = 2826.65;
         let tabelaIrFaixa2 = 3751.05; 
         let tabelaIrFaixa3 = 4664.68;
         //------------------------------//
-        let faixaUmIr = 169.44;
-        let faixaDoisIr = 381.44;
-        let faixaTresIr = 662.77;
-        let faixaQuatroIr = 896.00;
+        let faixaUmIr = 182.16;
+        let faixaDoisIr = 394.16;
+        let faixaTresIr = 675.49;
+        let faixaQuatroIr = 908.73;
         //------------------------------//
         let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     	//------------------------------//
         let deducao = 0;
-        if ((inss + pensao3 + valorDep) < 564.80){
-            deducao = 564.80;
+        if ((inss + pensao1 + valorDep) < 607.20){
+            deducao = 607.20;
         }else {
-            deducao = (inss + pensao3 + valorDep);
+            deducao = (inss + pensao1 + valorDep);
         }
-
+    
         let novoValor = (inBaseInss.value - deducao);
     
         if (novoValor <= tabelaIrFaixa0) {
@@ -308,24 +308,24 @@ function calculoPensao(){
         let inss = calculoInss();
         let irrfPensao4 = 0;
         // Faixas e Alíquotas de IRRF.
-        let tabelaIrFaixa0 = 2259.60;
+        let tabelaIrFaixa0 = 2428.80;
         let tabelaIrFaixa1 = 2826.65;
         let tabelaIrFaixa2 = 3751.05; 
         let tabelaIrFaixa3 = 4664.68;
         //------------------------------//
-        let faixaUmIr = 169.44;
-        let faixaDoisIr = 381.44;
-        let faixaTresIr = 662.77;
-        let faixaQuatroIr = 896.00;
+        let faixaUmIr = 182.16;
+        let faixaDoisIr = 394.16;
+        let faixaTresIr = 675.49;
+        let faixaQuatroIr = 908.73;
         //------------------------------//
         let qtDep = Math.floor(Number(inQtDep.value));
         let valorDep = qtDep * 189.59;
     	//------------------------------//
         let deducao = 0;
-        if ((inss + pensao4 + valorDep) < 564.80){
-            deducao = 564.80;
+        if ((inss + pensao1 + valorDep) < 607.20){
+            deducao = 607.20;
         }else {
-            deducao = (inss + pensao4 + valorDep);
+            deducao = (inss + pensao1 + valorDep);
         }
     
         let novoValor = (inBaseInss.value - deducao);
@@ -382,16 +382,16 @@ function calculoIrrf(){
 
     // Faixas e Alíquotas de IRRF.
 
-    let tabelaIrFaixa0 = 2259.60;
+    let tabelaIrFaixa0 = 2428.80;
     let tabelaIrFaixa1 = 2826.65;
     let tabelaIrFaixa2 = 3751.05; 
     let tabelaIrFaixa3 = 4664.68;
     
     let irrf = 0;
-    let faixaUmIr = 169.44;
-    let faixaDoisIr = 381.44;
-    let faixaTresIr = 662.77;
-    let faixaQuatroIr = 896.00;
+    let faixaUmIr = 182.16;
+    let faixaDoisIr = 394.16;
+    let faixaTresIr = 675.49;
+    let faixaQuatroIr = 908.73;
 
     let qtDep = Math.floor(Number(inQtDep.value));
     let valorDep = qtDep * 189.59;
@@ -401,8 +401,8 @@ function calculoIrrf(){
     }
 
     let deducao = 0;
-    if (564.80 > (inss + pensao + valorDep)){
-        deducao = 564.80;
+    if (607.20 > (inss + pensao + valorDep)){
+        deducao = 607.20;
     }else {
         deducao = (inss + pensao + valorDep);
     }
