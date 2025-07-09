@@ -9,9 +9,17 @@
 <body>
     <h1>Pensão x IRRF - IRRF x Pensão</h1>
 
+    <div class="date-selector-container">
+        <label for="dataReferencia">Referência do Cálculo:</label>
+        <input type="date" id="dataReferencia">
+    </div>
+
     <p>Base para INSS: <input type="number" id="inBaseInss" min="0" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
+
 <p>Base da Pensão: <input type="number" id="inBasePensao" min="0" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
+
 <p>Porcentagem: <input type="number" id="inPorcPensao" placeholder="Ex: 25%" min="1" onkeydown="if(event.key === 'e' || event.key === 'E') event.preventDefault();"></p>
+
 <p>Dependente(s): <input type="number" id="inQtDep" min="1" step="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></p>
 
     <p><input type="button" value="Calcular" id="btnCalcular"></p>
@@ -24,10 +32,6 @@
     <h3 id="outPensao5"></h3>
     <h3 id="outIrrf"></h3>
     <h3 id="outPensaoFinal"></h3>
-
-    <a href="pag2.html" target="_self" class="link-direita">
-        IRRF Maio de 2025 ➡
-    </a>
 
     <footer>
         <p>&copy;Desenvolvido por Carlos Alexandre Junior</p>
